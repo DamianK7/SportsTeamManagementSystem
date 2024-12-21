@@ -33,4 +33,10 @@ public class Player : IPlayer
     {
         Console.WriteLine($"Zawodnik: {Name}, Pozycja: {Position}, Punkty: {Score}");
     }
+
+    public static List<Player> SearchPlayersByPosition(List<Player> players, string position)
+    {
+        position = position.ToLower().Trim();
+        return players.Where(x => x.Position == position).ToList();
+    }
 }

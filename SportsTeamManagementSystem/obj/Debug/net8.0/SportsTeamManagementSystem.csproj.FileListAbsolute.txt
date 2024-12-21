@@ -1,0 +1,15 @@
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\obj\Debug\net8.0\SportsTeamManagementSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\obj\Debug\net8.0\SportsTeamManagementSystem.AssemblyInfoInputs.cache
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\obj\Debug\net8.0\SportsTeamManagementSystem.AssemblyInfo.cs
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\obj\Debug\net8.0\SportsTeamManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\obj\Debug\net8.0\SportsTeamManagementSystem.sourcelink.json
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\bin\Debug\net8.0\SportsTeamManagementSystem.exe
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\bin\Debug\net8.0\SportsTeamManagementSystem.deps.json
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\bin\Debug\net8.0\SportsTeamManagementSystem.runtimeconfig.json
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\bin\Debug\net8.0\SportsTeamManagementSystem.dll
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\bin\Debug\net8.0\SportsTeamManagementSystem.pdb
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\obj\Debug\net8.0\SportsTeamManagementSystem.dll
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\obj\Debug\net8.0\refint\SportsTeamManagementSystem.dll
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\obj\Debug\net8.0\SportsTeamManagementSystem.pdb
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\obj\Debug\net8.0\SportsTeamManagementSystem.genruntimeconfig.cache
+C:\Users\Damian\RiderProjects\SportsTeamManagementSystem\SportsTeamManagementSystem\obj\Debug\net8.0\ref\SportsTeamManagementSystem.dll

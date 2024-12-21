@@ -1,3 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-Console.WriteLine("Hello, World!");
+interface IPlayer
+{
+    string Name { get; set; }
+    string Position { get; set; }
+    int Score { get; set; }
+    void PlayerInfo();
+}

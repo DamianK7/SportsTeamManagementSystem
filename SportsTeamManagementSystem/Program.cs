@@ -26,7 +26,7 @@ public class Player : IPlayer
     public void UpdateScore(int points)
     {
         Score = points;
-        Console.WriteLine($"{Name}'s nowy wynik to: {Score}");
+        Console.WriteLine($"{Name} nowy wynik to: {Score}");
     }
 
     public void PlayerInfo()
@@ -115,5 +115,91 @@ public class Team
     public static double CalculateAverageScore(List<Player> players)
     {
         return players.Average(x => x.Score);
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Team team = new Team();
+        var playersList = team.Players.Cast<Player>().ToList();
+
+        while (true)
+        {
+            Console.WriteLine("\nMenu:");
+            Console.WriteLine("1. Dodaj zawodnika");
+            Console.WriteLine("2. Usuń zawodnika");
+            Console.WriteLine("3. Zaktualizuj wynik zawodnika");
+            Console.WriteLine("4. Wyszukaj zawodników po pozycji");
+            Console.WriteLine("5. Wyświetl statystyki drużyny");
+            Console.WriteLine("6. Oblicz średnią punktów drużyny");
+            Console.WriteLine("7. Zakończ");
+
+            string choice = Console.ReadLine();
+
+            switch (choice)
+            {
+                case "1":
+                    team.AddPlayer();
+                    break;
+                case "2":
+                    team.RemovePlayer();
+                    break;
+                case "3":
+                    Console.WriteLine("Aktualizacja wyniku zawodnika:");
+                    Player playerToUpdate = null;
+                    while (playerToUpdate == null)
+                    {
+                        Console.WriteLine("Podaj nazwisko zawodnika, którego wynik chcesz zaktualizować:");
+                        string playerName = Console.ReadLine();
+                        playerToUpdate = team.Players.Cast<Player>().FirstOrDefault(p => p.Name.Equals(playerName, StringComparison.OrdinalIgnoreCase));
+                        if (playerToUpdate == null)
+                        {
+                            Console.WriteLine("Zawodnik nie został znaleziony. Spróbuj ponownie.");
+                        }
+                    }
+                    Console.WriteLine("Podaj nowy wynik:");
+                    if (int.TryParse(Console.ReadLine(), out int newScore))
+                    {
+                        playerToUpdate.UpdateScore(newScore);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Nieprawidłowy wynik!");
+                    }
+                    break;
+                case "4":
+                    Console.WriteLine("Podaj pozycję, aby wyszukać zawodników:");
+                    string position = Console.ReadLine();
+                    var foundPlayers = Player.SearchPlayersByPosition(team.Players.Cast<Player>().ToList(), position);
+                    if (foundPlayers.Any())
+                    {
+                        foreach (var player in foundPlayers)
+                        {
+                            player.PlayerInfo();
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Nie znaleziono zawodników na pozycji: {position}");
+                    }
+                    break;
+                case "5":
+                    Console.WriteLine("Wyświetlanie statystyk drużyny:");
+                    team.DisplayTeamStats();
+                    break;
+                case "6":
+                    double averageScore = Team.CalculateAverageScore(team.Players.Cast<Player>().ToList());
+                    Console.WriteLine($"Średni wynik drużyny: {averageScore}");
+                    break;
+                case "7":
+                    Console.WriteLine("Kończenie programu...");
+                    return;
+                default:
+                    Console.WriteLine("Nieprawidłowa opcja! Spróbuj ponownie.");
+                    break;
+            }
+        }
     }
 }
